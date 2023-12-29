@@ -1,3 +1,4 @@
+console.log("Hello! I need to compile the following code correctly.");
 /**
  * 1. Returns the length of the first word in a string.
  *
@@ -30,7 +31,7 @@ function getUserNamings(a: { name: string; surname: string }): { fullname: strin
 /**
  * 3. Returns an array of product names from the "a" object.
  *
- * @param {Object} a - An object that may contain a 'products' property, 
+ * @param {Object} a - An object that may contain a 'products' property,
  *                    which is an array of objects with a 'name' property.
  * @property {Array<Object>} a.products - An array of objects with a 'name' property.
  * @property {string} a.products.name - The name property of each product.
@@ -42,7 +43,7 @@ function getAllProductNames(a: { products?: { name: string }[] }): string[] {
 
 
 /*
-   4.  
+   4.
      easy way is using 'as' keyword
      hard way is ?...
      define a separate interface for the type of object passed to the function
@@ -202,7 +203,7 @@ function hey_2(a: PersonInfo): string {
     return "hey! i'm " + a.name()
         + (a.type === "cat" ? ("cuteness: " + a.cuteness) : ("coolness: " + a.coolness))
 }
-// Calling the hey_2() method 
+// Calling the hey_2() method
 hey_2({ name: () => "roma", type: "cat", cuteness: 100 })
 hey_2({ name: () => "vasya", type: "dog", coolness: 100 })
 
