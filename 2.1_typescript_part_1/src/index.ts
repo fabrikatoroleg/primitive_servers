@@ -1,6 +1,7 @@
 console.log("Hello! I need to compile the following code correctly.");
 /**
- * 1. Returns the length of the first word in a string.
+ * Task 2.1.1
+ * Returns the length of the first word in a string.
  *
  * @param {string} a - The input string.
  * @returns {number} - The length of the first word.
@@ -11,7 +12,8 @@ function getFirstWord(a: string): number {
 
 
 /**
- * 2. Returns a new object that contains two properties.
+ * Task 2.1.2
+ * Returns a new object that contains two properties.
  *
  * @param {Object} a - An object with properties 'name' and 'surname'.
  * @property {string} a.name - The name property.
@@ -29,7 +31,8 @@ function getUserNamings(a: { name: string; surname: string }): { fullname: strin
 
 
 /**
- * 3. Returns an array of product names from the "a" object.
+ * Task 2.1.3
+ * Returns an array of product names from the "a" object.
  *
  * @param {Object} a - An object that may contain a 'products' property,
  *                    which is an array of objects with a 'name' property.
@@ -43,14 +46,15 @@ function getAllProductNames(a: { products?: { name: string }[] }): string[] {
 
 
 /*
-   4.
+     Task 2.1.4
      easy way is using 'as' keyword
      hard way is ?...
      define a separate interface for the type of object passed to the function
 */
 
 /**
- * 4.1 Defines the interface for an object with a 'name' method and additional properties of any type.
+ * Task 2.1.4.1 
+ * Defines the interface for an object with a 'name' method and additional properties of any type.
  *
  * @interface
  */
@@ -80,7 +84,8 @@ hey({ name: () => "vasya", coolness: 100 });
 
 
 /**
- * 4.2 Defines the interface Pet with a 'name' method and additional properties of any type.
+ * Task 2.1.4.2 
+ * Defines the interface Pet with a 'name' method and additional properties of any type.
  *
  * @interface
  */
@@ -109,10 +114,10 @@ class Cat implements Pet {
      */
     constructor(protected nameCat: string, protected coolness: boolean) { }
     /**
-        * Returns the name of the cat.
-        *
-        * @returns {string} - The name of the cat.
-        */
+    * Returns the name of the cat.
+    *
+    * @returns {string} - The name of the cat.
+    */
     name(): string {
         return this.nameCat;
     }
@@ -162,7 +167,8 @@ hey_1(b)
 
 
 /**
- * 4.3 Defines the interface for information about a person.
+ * Task 2.1.4.3 
+ * Defines the interface for information about a person.
  *
  * @interface
  */
@@ -209,7 +215,8 @@ hey_2({ name: () => "vasya", type: "dog", coolness: 100 })
 
 
 /**
- * 5. Returns either an array of strings or an array of keys from the object.
+ * Task 2.1.5
+ * Returns either an array of strings or an array of keys from the object.
  *
  * @param {string[] | Record<string, any>} a - An array of strings or an object with
  *                                             properties of any type.
@@ -223,7 +230,8 @@ function stringEntries(a: string[] | Record<string, any>): string[] {
 
 
 /**
- * 6. Generates a string by repeating the "*" character a specified number of times.
+ * Task 2.1.6
+ * Generates a string by repeating the "*" character a specified number of times.
  *
  * @param {number} a - The number of times the "*" character is repeated to form the string.
  * @return {Promise<string>} - A promise that resolves to a string consisting of repeated "*" characters.
