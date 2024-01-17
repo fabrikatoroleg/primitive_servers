@@ -211,6 +211,7 @@ getThreeNamesAsyncAwait().then(names => console.log(`Task 2.2.3.2: ${names}`));
  */
 function getThreeNamesByPromises(): Promise<string[]> {
 
+    // генеруємо три запити паралельно
     return new Promise((resolve, reject) => {
         // an array of names
         const names: string[] = [];
@@ -237,8 +238,6 @@ function getThreeNamesByPromises(): Promise<string[]> {
         for (let i = 0; i < numberOfNames; i++) {
             makeRequest(i);
         }
-        // Array.from({ length: numberOfNames }, (_, i) => makeRequest(i));
-
     });
 }
 
