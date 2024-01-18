@@ -1,19 +1,20 @@
 import express from 'express';
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import db from './db';
-import todoRouter from './routes/todoRoutes';
+import path from 'path';
 
 const app = express();
 const port = 3005;
 
-app.use(cors());
-app.use(bodyParser.json());
+// Вказати шлях до статичних файлів (frontend)
+app.use(express.static(path.join(__dirname, '../frontend')));
 
-app.use(express.static(path.join(__dirname, '../../frontend')));
+// Обробник для відправлення index.html при запиті на корінь
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
 
-app.use('/api/v1', todoRouter);
+// Решта вашого коду Express...
 
+// Слухати на заданому порту
 app.listen(port, () => {
-  console.log(`Сервер запущено на порті ${port}`);
+    console.log(`Server is running at http://localhost:${port}`);
 });
