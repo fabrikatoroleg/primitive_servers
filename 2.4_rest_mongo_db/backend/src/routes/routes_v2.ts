@@ -3,10 +3,10 @@ import express, { Router, Request, Response } from 'express';
 import { handleLogin, handleLogout, handleRegister } from '../controllers/authController';
 import { handleGetItems, handleDeleteItem, handleAddItem, handleEditItem } from '../controllers/itemController';
 
-const router: Router = express.Router();
+const v2Routes: Router = express.Router();
 
 // Роутер для обробки
-router.all('/router', async (req: Request, res: Response) => {
+v2Routes.all('/router', async (req: Request, res: Response) => {
   try {
     // по query string викликайте конкретну функцію
     const { action } = req.query;
@@ -55,4 +55,4 @@ router.all('/router', async (req: Request, res: Response) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
-export default router;
+export default v2Routes;
