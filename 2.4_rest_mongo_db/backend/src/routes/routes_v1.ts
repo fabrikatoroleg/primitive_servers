@@ -19,6 +19,6 @@ v1Routes
     .post(LOGIN_PATH, handleLogin) // POST /login - Виконати логін
     .post(LOGOUT_PATH, handleLogout) // POST /logout - Виконати логаут
     .post(REGISTER_PATH, handleRegister) // POST /register - Зареєструвати нового користувача
-    .get(SESSION_PATH, handleGetSession);  // GET /session - Отримати інформацію про сесію
+    .get('/session', handleGetSession);  // GET /session - Отримати інформацію про сесію 
 
 export default v1Routes;
